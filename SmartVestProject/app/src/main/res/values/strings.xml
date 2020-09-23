@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Smart Vest</string>
+    <string name="smart_vest_icon_stroke">smart vest icon</string>
+    <string name="login_worker">작업자 로그인</string>
+    <string name="login_manager">관리자 로그인</string>
+    <string name="text_login">로그인</string>
+    <string name="text_manager">관리자</string>
+    <string name="text_id_hint">아이디를 입력하세요.</string>
+    <string name="text_pw_hint">비밀번호를 입력하세요.</string>
+    <string name="text_id">ID</string>
+    <string name="text_pw">PASSWORD</string>
+    <string name="text_login_worker">작업자 로그인</string>
+    <string name="text_port_select">항만 선택</string>
+    <string name="text_port_hint">항만을 선택하세요.</string>
+    <string name="text_wharf_select">부두 선택</string>
+    <string name="text_wharf_hint">부두를 선택하세요.</string>
+    <string name="text_company_select">소속 회사 선택</string>
+    <string name="text_company_hint">소속 회사를 선택하세요.</string>
+    <string name="text_location_manager">작업자 위치 확인하기</string>
+</resources>

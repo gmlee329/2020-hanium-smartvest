@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="app_name_color">#424242</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="button_color">#78bef0</color>
+    <color name="button_stroke_color">#61bbf7</color>
+    <color name="hint_color">#bebebe</color>
+    <color name="gray_color">#e0e0e0</color>
+</resources>
