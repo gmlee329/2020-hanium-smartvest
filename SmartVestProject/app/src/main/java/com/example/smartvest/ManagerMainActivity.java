@@ -27,5 +27,12 @@ public class ManagerMainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        safety_mgr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ManagerSafetyActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -27,6 +27,7 @@
         <activity android:name=".WorkerLoginActivity"
             android:windowSoftInputMode="stateHidden|adjustPan"></activity>
         <activity android:name=".ManagerMapActivity"></activity>
+        <activity android:name=".ManagerSafetyActivity"></activity>
     </application>
 
 </manifest>
