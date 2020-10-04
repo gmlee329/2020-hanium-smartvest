@@ -9,4 +9,5 @@
     <color name="button_stroke_color">#61bbf7</color>
     <color name="hint_color">#bebebe</color>
     <color name="gray_color">#e0e0e0</color>
+    <color name="white_gray_color">#f3f3f3</color>
 </resources>
