@@ -11,11 +11,11 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class ManagerMainActivity extends AppCompatActivity {
-    LinearLayout location_mgr;
-    Button safety_mgr;
-    ImageView logo_location_mgr;
+    ConstraintLayout location_mgr;
+    ConstraintLayout safety_mgr;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,7 +38,5 @@ public class ManagerMainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        logo_location_mgr = findViewById(R.id.logo_location_mgr);
     }
 }

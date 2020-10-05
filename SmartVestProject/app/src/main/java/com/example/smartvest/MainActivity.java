@@ -64,9 +64,4 @@ public class MainActivity extends AppCompatActivity {
         spannableString.setSpan(new RelativeSizeSpan(1.2f), start_2, end_2, SpannableString.SPAN_EXCLUSIVE_EXCLUSIVE);
         textView.setText(spannableString);
     }
-
-    @Override
-    public void onBackPressed() {
-        //super.onBackPressed();
-    }
 }

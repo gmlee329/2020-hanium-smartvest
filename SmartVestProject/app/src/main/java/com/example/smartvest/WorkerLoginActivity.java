@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Filter;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,11 +28,19 @@ public class WorkerLoginActivity extends AppCompatActivity {
     private List<String> selected_wharfList;
     private List<String> companyList;
     AutoCompleteAdapter adapter_wharf;
+    ImageView back_login_worker;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_worker);
+        back_login_worker = findViewById(R.id.back_login_worker);
+        back_login_worker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
         fillPortList();
         fillCompanyList();
         fillWharfList();

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray_color"
@@ -11,46 +12,77 @@
     android:paddingRight="1dp"
     android:weightSum="2">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/location_mgr"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="5dp"
         android:layout_weight="1"
         android:background="@drawable/selector_location_mgr"
-        android:orientation="vertical"
         android:padding="2dp">
 
         <ImageView
             android:id="@+id/logo_location_mgr"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:adjustViewBounds="true"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.289"
             app:srcCompat="@drawable/manager_location_check" />
 
         <TextView
             android:id="@+id/text_location_mgr"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/text_location_manager" />
+            android:text="@string/text_location_manager"
+            android:textColor="@color/app_name_color"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo_location_mgr"
+            app:layout_constraintVertical_bias="0.351" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/safety_mgr"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:background="@drawable/buttonshape_white"
         android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/selector_location_mgr"
         android:padding="2dp">
 
-        <Button
-            android:id="@+id/safety_mgr"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/worker_safety_check"/>
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/logo_safety_mgr"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.289"
+            app:srcCompat="@drawable/worker_safety_check" />
+        <TextView
+            android:id="@+id/text_safety_mgr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_safety_manager"
+            android:textColor="@color/app_name_color"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo_safety_mgr"
+            app:layout_constraintVertical_bias="0.351" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </LinearLayout>
