@@ -21,4 +21,10 @@
     <string name="text_number">번호</string>
     <string name="text_danger">위험요인</string>
     <string name="text_safety">안전도</string>
+    <string name="text_location_worker">내 위치 확인하기</string>
+    <string name="text_safety_worker">안전도 상세보기</string>
+    <string name="text_manual_worker">매뉴얼</string>
+    <string name="text_report_worker">신고 접수</string>
+    <string name="text_my_vest_number">"내 조끼 번호 | "</string>
+    <string name="text_vest_connection">"조끼 연결 상태 | "</string>
 </resources>
