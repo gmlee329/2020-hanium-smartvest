@@ -59,9 +59,9 @@ public class MainActivity extends AppCompatActivity {
         int end_2 = start_2 + 1;
 
         spannableString.setSpan(new ForegroundColorSpan(Color.parseColor("#78bef0")), start_1, end_1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannableString.setSpan(new RelativeSizeSpan(1.2f), start_1, end_1, SpannableString.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString.setSpan(new RelativeSizeSpan(1.1f), start_1, end_1, SpannableString.SPAN_EXCLUSIVE_EXCLUSIVE);
         spannableString.setSpan(new ForegroundColorSpan(Color.parseColor("#78bef0")), start_2, end_2, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannableString.setSpan(new RelativeSizeSpan(1.2f), start_2, end_2, SpannableString.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString.setSpan(new RelativeSizeSpan(1.1f), start_2, end_2, SpannableString.SPAN_EXCLUSIVE_EXCLUSIVE);
         textView.setText(spannableString);
     }
 }

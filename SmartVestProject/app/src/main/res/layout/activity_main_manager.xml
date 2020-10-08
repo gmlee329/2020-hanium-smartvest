@@ -23,30 +23,38 @@
 
         <ImageView
             android:id="@+id/logo_location_mgr"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.289"
-            app:srcCompat="@drawable/manager_location_check" />
+            app:srcCompat="@drawable/manager_location_check"
+            app:layout_constraintWidth_percent="0.34"
+            app:layout_constraintDimensionRatio="1"/>
 
         <TextView
             android:id="@+id/text_location_mgr"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:text="@string/text_location_manager"
             android:textColor="@color/app_name_color"
-            android:textSize="30dp"
             android:textStyle="bold"
+            app:autoSizeMaxTextSize="100dp"
+            app:autoSizeMinTextSize="20dp"
+            app:autoSizeStepGranularity="1dp"
+            app:autoSizeTextType="uniform"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/logo_location_mgr"
-            app:layout_constraintVertical_bias="0.351" />
+            app:layout_constraintVertical_bias="0.351"
+            android:gravity="center"
+            app:layout_constraintWidth_percent="0.75"
+            app:layout_constraintDimensionRatio="7"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -60,29 +68,37 @@
 
         <ImageView
             android:id="@+id/logo_safety_mgr"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.289"
-            app:srcCompat="@drawable/worker_safety_check" />
+            app:srcCompat="@drawable/worker_safety_check"
+            app:layout_constraintWidth_percent="0.34"
+            app:layout_constraintDimensionRatio="1"/>
         <TextView
             android:id="@+id/text_safety_mgr"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:text="@string/text_safety_manager"
             android:textColor="@color/app_name_color"
-            android:textSize="30dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/logo_safety_mgr"
-            app:layout_constraintVertical_bias="0.351" />
+            app:layout_constraintVertical_bias="0.351"
+            android:gravity="center"
+            app:autoSizeMaxTextSize="100dp"
+            app:autoSizeMinTextSize="20dp"
+            app:autoSizeStepGranularity="1dp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintWidth_percent="0.75"
+            app:layout_constraintDimensionRatio="7"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
