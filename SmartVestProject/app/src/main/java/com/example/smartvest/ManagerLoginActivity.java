@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ManagerLoginActivity extends AppCompatActivity {
-    Button button_login;
+    Button button_login_manager;
     ImageView back_login_manager;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,8 +23,8 @@ public class ManagerLoginActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
-        button_login = findViewById(R.id.button_login_manager);
-        button_login.setOnClickListener(new View.OnClickListener() {
+        button_login_manager = findViewById(R.id.button_login_manager);
+        button_login_manager.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ManagerMainActivity.class);

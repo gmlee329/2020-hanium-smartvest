@@ -11,7 +11,7 @@
         android:paddingBottom="10dp">
 
         <ImageView
-            android:id="@+id/back_location_mgr"
+            android:id="@+id/back_location_worker"
             android:layout_width="25dp"
             android:layout_height="25dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -22,11 +22,11 @@
             app:srcCompat="@drawable/left_arrow" />
 
         <TextView
-            android:id="@+id/text_location_worker"
+            android:id="@+id/text_location_worker2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/text_location_manager"
+            android:text="@string/text_location_worker"
             android:textColor="@color/app_name_color"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -41,11 +41,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-    <fragment
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/map_manager"
-        android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        <fragment
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map_worker"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </LinearLayout>
 </LinearLayout>

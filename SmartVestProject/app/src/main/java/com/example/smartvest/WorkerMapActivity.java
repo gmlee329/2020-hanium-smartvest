@@ -13,17 +13,17 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class ManagerMapActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class WorkerMapActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    ImageView back_location_mgr;
+    ImageView back_location_worker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_location_manager);
-        back_location_mgr = findViewById(R.id.back_location_mgr);
-        back_location_mgr.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_location_worker);
+        back_location_worker = findViewById(R.id.back_location_worker);
+        back_location_worker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();
@@ -31,7 +31,7 @@ public class ManagerMapActivity extends AppCompatActivity implements OnMapReadyC
         });
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map_manager);
+                .findFragmentById(R.id.map_worker);
         mapFragment.getMapAsync(this);
     }
 
@@ -63,5 +63,4 @@ public class ManagerMapActivity extends AppCompatActivity implements OnMapReadyC
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ULSAN, 16));
     }
-
 }

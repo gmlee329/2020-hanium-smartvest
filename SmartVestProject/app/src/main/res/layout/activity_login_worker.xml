@@ -9,7 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/titlebar_underline"
-        android:gravity="center"
         android:paddingTop="10dp"
         android:paddingBottom="10dp">
 

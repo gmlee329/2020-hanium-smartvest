@@ -1,6 +1,7 @@
 package com.example.smartvest;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.Filter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -29,11 +31,22 @@ public class WorkerLoginActivity extends AppCompatActivity {
     private List<String> companyList;
     AutoCompleteAdapter adapter_wharf;
     ImageView back_login_worker;
+    Button button_login_worker;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_worker);
+
+        button_login_worker = findViewById(R.id.button_login_worker);
+        button_login_worker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WokerMainActivity.class);
+                startActivity(intent);
+            }
+        });
+
         back_login_worker = findViewById(R.id.back_login_worker);
         back_login_worker.setOnClickListener(new View.OnClickListener() {
             @Override

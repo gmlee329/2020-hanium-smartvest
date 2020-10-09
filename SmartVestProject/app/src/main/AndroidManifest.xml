@@ -28,6 +28,8 @@
             android:windowSoftInputMode="stateHidden|adjustPan"></activity>
         <activity android:name=".ManagerMapActivity"></activity>
         <activity android:name=".ManagerSafetyActivity"></activity>
+        <activity android:name=".WokerMainActivity"></activity>
+        <activity android:name=".WorkerMapActivity"></activity>
     </application>
 
 </manifest>
