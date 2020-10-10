@@ -32,6 +32,9 @@
         <activity android:name=".WorkerMapActivity"></activity>
         <activity android:name=".WorkerManualActivity"></activity>
         <activity android:name=".ManualSmartVestActivity"></activity>
+        <activity android:name=".ManualVestConnectActivity"></activity>
+        <activity android:name=".ManualConstructActivity"></activity>
+        <activity android:name=".ManualGeneralActivity"></activity>
     </application>
 
 </manifest>

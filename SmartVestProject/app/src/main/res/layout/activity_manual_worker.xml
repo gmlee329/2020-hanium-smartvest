@@ -91,6 +91,47 @@
                     app:layout_constraintHorizontal_bias="0"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/manual_general"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:background="@drawable/selector_location_mgr"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:padding="2dp">
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/manual_guide6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.8"></androidx.constraintlayout.widget.Guideline>
+
+                <TextView
+                    android:id="@+id/text_manual_general"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_manual_general"
+                    android:textColor="@color/app_name_color"
+                    android:textStyle="bold"
+                    android:textSize="28dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/manual_guide6"
+                    app:layout_constraintHorizontal_bias="0.6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:gravity="center" />
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:srcCompat="@drawable/right_circle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/manual_guide6"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/manual_construct"
                 android:layout_width="match_parent"
                 android:layout_height="115dp"
