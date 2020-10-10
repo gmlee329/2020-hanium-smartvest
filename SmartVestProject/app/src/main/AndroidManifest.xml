@@ -30,6 +30,8 @@
         <activity android:name=".ManagerSafetyActivity"></activity>
         <activity android:name=".WokerMainActivity"></activity>
         <activity android:name=".WorkerMapActivity"></activity>
+        <activity android:name=".WorkerManualActivity"></activity>
+        <activity android:name=".ManualSmartVestActivity"></activity>
     </application>
 
 </manifest>
