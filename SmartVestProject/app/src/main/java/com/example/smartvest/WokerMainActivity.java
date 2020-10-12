@@ -29,6 +29,13 @@ public class WokerMainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        safety_worker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WorkerSafetyActivity.class);
+                startActivity(intent);
+            }
+        });
         manual_worker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

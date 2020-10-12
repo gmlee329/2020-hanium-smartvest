@@ -15,9 +15,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
 
             <TextView
                 android:id="@+id/vest_number"
@@ -44,7 +44,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="안전"
-                android:textColor="@color/app_name_color"/>
+                android:textColor="@color/app_name_color" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
