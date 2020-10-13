@@ -36,6 +36,7 @@
         <activity android:name=".ManualConstructActivity"></activity>
         <activity android:name=".ManualGeneralActivity"></activity>
         <activity android:name=".WorkerSafetyActivity"></activity>
+        <activity android:name=".PopupActivity" android:theme="@style/PopupTheme"></activity>
     </application>
 
 </manifest>
