@@ -39,5 +39,9 @@
     <string name="text_manual_vest_connect2">스마트조끼와 블루투스 연결하기</string>
     <string name="text_manual_vest_func">스마트조끼 기능</string>
     <string name="text_safety_mq5">LPG, 천연, 석탄 등\n가연성 가스</string>
-    <string name="text_safety_mq5_info">가연성 물질의 위험수치 값 500ppm 기준</string>
+    <string name="text_safety_mq5_info">가연성 가스의 위험수치 값 500ppm 기준</string>
+    <string name="text_safety_mq2">프로판, 부탄, 일산화탄소\n질식성 가스</string>
+    <string name="text_safety_mq2_info">가연성 가스의 위험수치 값 500ppm 기준</string>
+    <string name="text_safety_temp">온도 / 습도</string>
+    <string name="text_safety_temp_info">온도 20도 / 습도 30% 기준</string>
 </resources>
