@@ -66,6 +66,22 @@
                         android:orientation="vertical"
                         app:layout_constraintGuide_percent="0.35"></androidx.constraintlayout.widget.Guideline>
 
+                    <com.dinuscxj.progressbar.CircleProgressBar
+                        android:id="@+id/graph_temp"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="5dp"
+                        app:style="solid_line"
+                        app:progress_text_size="14dp"
+                        app:progress_stroke_width="20dp"
+                        app:progress_stroke_cap="round"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/safety_temp_guide"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+                    </com.dinuscxj.progressbar.CircleProgressBar>
+
+
                     <TextView
                         android:id="@+id/text_safety_temp"
                         android:layout_width="wrap_content"
@@ -85,7 +101,7 @@
                         android:id="@+id/text_safety_temp_per"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="30%"
+                        android:text="26℃ / 30%"
                         android:textSize="35dp"
                         android:textColor="@color/app_name_color"
                         android:layout_marginTop="5dp"

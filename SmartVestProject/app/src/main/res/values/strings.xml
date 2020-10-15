@@ -44,4 +44,5 @@
     <string name="text_safety_mq2_info">가연성 가스의 위험수치 값 500ppm 기준</string>
     <string name="text_safety_temp">온도 / 습도</string>
     <string name="text_safety_temp_info">온도 20도 / 습도 30% 기준</string>
+    <string name="degree">℃</string>
 </resources>
