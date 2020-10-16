@@ -30,7 +30,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.289"
+            app:layout_constraintVertical_bias="0.3"
             app:srcCompat="@drawable/manager_location_check"
             app:layout_constraintWidth_percent="0.34"
             app:layout_constraintDimensionRatio="1"/>
@@ -75,10 +75,11 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.289"
+            app:layout_constraintVertical_bias="0.3"
             app:srcCompat="@drawable/worker_safety_check"
             app:layout_constraintWidth_percent="0.34"
             app:layout_constraintDimensionRatio="1"/>
+
         <TextView
             android:id="@+id/text_safety_mgr"
             android:layout_width="0dp"
