@@ -35,17 +35,11 @@ public class ManagerSafetyActivity extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
-        query();
+
     }
     public void query() {
         ArrayList<Worker> items = new ArrayList<Worker>();
         for (int i = 0; i < 20; i++) {
-
-            Worker worker = new Worker();
-            worker.number = i;
-            worker.danger = "위험도 낮음";
-            worker.safety = "안전";
-            items.add(worker);
         }
         adapter.setItems(items);
         adapter.notifyDataSetChanged();

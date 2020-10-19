@@ -69,9 +69,11 @@ public class ManagerAdapter extends RecyclerView.Adapter<ManagerAdapter.ViewHold
         }
 
         public void setItem(Worker item) {
-            String number = Integer.toString(item.number);
-            String danger = item.danger;
-            String safety = item.safety;
+            if (item == null)
+                return;
+            String number = Integer.toString(item.director_id);
+            String danger = item.vest_id;
+            String safety = item.vest_id;
             vest_number.setText(number);
             vest_danger.setText(danger);
             vest_safety.setText(safety);

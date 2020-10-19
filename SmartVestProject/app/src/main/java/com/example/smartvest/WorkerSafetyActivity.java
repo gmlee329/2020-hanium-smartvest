@@ -1,5 +1,9 @@
 package com.example.smartvest;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -25,6 +29,8 @@ public class WorkerSafetyActivity extends AppCompatActivity {
     TextView text_safety_temp;
     ImageView safety_temp_info;
 
+    BroadcastReceiver safety_receiver = null;
+
     CircleProgressBar graph_temp;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,27 +46,10 @@ public class WorkerSafetyActivity extends AppCompatActivity {
         text_safety_temp = findViewById(R.id.text_safety_temp);
         safety_temp_info = findViewById(R.id.safety_temp_info);
         back_safety_worker = findViewById(R.id.back_safety_worker);
-
         graph_temp = findViewById(R.id.graph_temp);
-        CircleProgressBar.ProgressFormatter progressFormatter = new CircleProgressBar.ProgressFormatter() {
-            @Override
-            public CharSequence format(int progress, int max) {
-                return "좋음";
-            }
-        };
-        graph_temp.setProgressFormatter(progressFormatter);
-        graph_temp.setProgressTextColor(ContextCompat.getColor(this, R.color.button_color));
-        graph_temp.setProgressBackgroundColor(ContextCompat.getColor(this, R.color.white_gray_color));
-        graph_temp.setProgressStartColor(ContextCompat.getColor(this, R.color.button_color));
-        graph_temp.setProgressEndColor(ContextCompat.getColor(this, R.color.button_color));
-        int max = 100;
-        int progress = 70;
-        int pi = 360;
-        int start = 270;
-        int degree = start-(int)((progress/(double)max)*pi);
-        graph_temp.setMax(max);
-        graph_temp.setProgress(progress);
-        graph_temp.setStartDegree(degree);
+        register_receiver();
+
+        set_graph(graph_temp);
         safety_temp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -117,5 +106,64 @@ public class WorkerSafetyActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+    }
+
+    public void set_graph(CircleProgressBar graph) {
+        CircleProgressBar.ProgressFormatter progressFormatter = new CircleProgressBar.ProgressFormatter() {
+            @Override
+            public CharSequence format(int progress, int max) {
+                return "좋음";
+            }
+        };
+        graph.setProgressFormatter(progressFormatter);
+        graph.setProgressTextColor(ContextCompat.getColor(this, R.color.button_color));
+        graph.setProgressBackgroundColor(ContextCompat.getColor(this, R.color.white_gray_color));
+        graph.setProgressStartColor(ContextCompat.getColor(this, R.color.button_color));
+        graph.setProgressEndColor(ContextCompat.getColor(this, R.color.button_color));
+        int max = 100;
+        int progress = 70;
+        int pi = 360;
+        int start = 270;
+        int degree = start-(int)((progress/(double)max)*pi);
+        graph.setMax(max);
+        graph.setStartDegree(degree);
+    }
+
+    public void register_receiver() {
+        if (safety_receiver != null)
+            return;
+        IntentFilter filter = new IntentFilter();
+        filter.addAction("worker_safety");
+
+        this.safety_receiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                int data = intent.getIntExtra("progress", 0);
+                if (intent.getAction().equals("worker_safety")) {
+                    int max = 100;
+                    int progress = data;
+                    int pi = 360;
+                    int start = 270;
+                    int degree = start-(int)((progress/(double)max)*pi);
+                    graph_temp.setProgress(progress);
+                    graph_temp.setStartDegree(degree);
+                }
+            }
+        };
+
+        this.registerReceiver(this.safety_receiver, filter);
+    }
+
+    public void unregister_receiver() {
+        if (safety_receiver != null) {
+            this.unregisterReceiver(safety_receiver);
+            safety_receiver = null;
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregister_receiver();
     }
 }

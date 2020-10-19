@@ -13,6 +13,7 @@ public class WokerMainActivity extends AppCompatActivity {
     ConstraintLayout safety_worker;
     ConstraintLayout manual_worker;
     ConstraintLayout report_worker;
+    SafetyService safetyService = new SafetyService();
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,5 +44,8 @@ public class WokerMainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Intent intent = new Intent(getApplicationContext(), SafetyService.class);
+        startService(intent);
     }
 }
