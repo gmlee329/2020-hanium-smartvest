@@ -21,11 +21,22 @@ public class SafetyService extends Service {
             @Override
             public void run() {
                 int progress = 1;
+                double l1 = 35.50;
+                double l2 = 129.37;
                 boolean up = true;
                 while (run) {
                     try {
                         Intent intent = new Intent("worker_safety");
                         intent.setPackage("com.example.smartvest");
+                        double r = Math.random()/10000;
+                        if (r >= 0.00005) {
+                            l1 += r;
+                            l2 += r;
+                        }
+                        else {
+                            l1 -= r;
+                            l2 -= r;
+                        }
                         if (progress >= 100 || progress <= 0)
                             up = !up;
                         if (up)
@@ -33,6 +44,8 @@ public class SafetyService extends Service {
                         else
                             progress--;
                         intent.putExtra("progress", progress);
+                        intent.putExtra("l1", l1);
+                        intent.putExtra("l2", l2);
                         sendBroadcast(intent);
                         Thread.sleep(1000);
                     } catch (Exception e) {
