@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -28,6 +29,7 @@ public class WorkerSafetyActivity extends AppCompatActivity {
     ConstraintLayout safety_temp;
     TextView text_safety_temp;
     ImageView safety_temp_info;
+    ImageView home_safety_worker;
 
     BroadcastReceiver safety_receiver = null;
 
@@ -47,6 +49,15 @@ public class WorkerSafetyActivity extends AppCompatActivity {
         safety_temp_info = findViewById(R.id.safety_temp_info);
         back_safety_worker = findViewById(R.id.back_safety_worker);
         graph_temp = findViewById(R.id.graph_temp);
+        home_safety_worker = findViewById(R.id.home_safety_worker);
+        home_safety_worker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WokerMainActivity.class);
+                intent.setFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
         register_receiver();
 
         set_graph(graph_temp);
@@ -118,15 +129,16 @@ public class WorkerSafetyActivity extends AppCompatActivity {
         graph.setProgressFormatter(progressFormatter);
         graph.setProgressTextColor(ContextCompat.getColor(this, R.color.button_color));
         graph.setProgressBackgroundColor(ContextCompat.getColor(this, R.color.white_gray_color));
-        graph.setProgressStartColor(ContextCompat.getColor(this, R.color.button_color));
-        graph.setProgressEndColor(ContextCompat.getColor(this, R.color.button_color));
+
         int max = 100;
-        int progress = 70;
+        int progress = 0;
         int pi = 360;
         int start = 270;
         int degree = start-(int)((progress/(double)max)*pi);
         graph.setMax(max);
-        graph.setStartDegree(degree);
+        //graph.setStartDegree(degree);
+        graph.setProgressStartColor(Color.BLUE);
+        graph.setProgressEndColor(Color.RED);
     }
 
     public void register_receiver() {
@@ -146,7 +158,7 @@ public class WorkerSafetyActivity extends AppCompatActivity {
                     int start = 270;
                     int degree = start-(int)((progress/(double)max)*pi);
                     graph_temp.setProgress(progress);
-                    graph_temp.setStartDegree(degree);
+                    //graph_temp.setStartDegree(degree);
                 }
             }
         };

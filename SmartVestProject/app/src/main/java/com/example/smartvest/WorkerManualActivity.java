@@ -15,6 +15,7 @@ public class WorkerManualActivity extends AppCompatActivity {
     ConstraintLayout manual_smartvest;
     ConstraintLayout manual_general;
     ConstraintLayout manual_construct;
+    ImageView home_manual_worker;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +24,15 @@ public class WorkerManualActivity extends AppCompatActivity {
         manual_smartvest = findViewById(R.id.manual_smartvest);
         manual_general = findViewById(R.id.manual_general);
         manual_construct = findViewById(R.id.manual_construct);
+        home_manual_worker = findViewById(R.id.home_manual_worker);
+        home_manual_worker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WokerMainActivity.class);
+                intent.setFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
 
         back_manual_worker.setOnClickListener(new View.OnClickListener() {
             @Override

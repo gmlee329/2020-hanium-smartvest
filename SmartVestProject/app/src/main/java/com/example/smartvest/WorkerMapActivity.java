@@ -27,12 +27,22 @@ public class WorkerMapActivity extends AppCompatActivity implements OnMapReadyCa
     ImageView back_location_worker;
     BroadcastReceiver safety_receiver = null;
     Marker my_marker;
+    ImageView home_location_worker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location_worker);
         back_location_worker = findViewById(R.id.back_location_worker);
+        home_location_worker = findViewById(R.id.home_location_worker);
+        home_location_worker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WokerMainActivity.class);
+                intent.setFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
         back_location_worker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

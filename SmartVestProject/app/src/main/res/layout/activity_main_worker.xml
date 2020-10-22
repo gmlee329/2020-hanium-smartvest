@@ -41,6 +41,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/bluetooth_connect"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/buttonshape_dark_gray"
@@ -59,13 +60,8 @@
                 android:id="@+id/vest_connection"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/text_vest_connection" />
+                android:text="@string/text_bluetooth_connect" />
 
-            <TextView
-                android:id="@+id/vest_state"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="00" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
 
 public class WokerMainActivity extends AppCompatActivity {
     ConstraintLayout location_worker;
@@ -20,6 +21,9 @@ public class WokerMainActivity extends AppCompatActivity {
     ConstraintLayout manual_worker;
     ConstraintLayout report_worker;
     TextView logout_worker;
+    LinearLayout bluetooth_connect;
+    TextView vest_connection;
+    TextView safety_state_worker;
     BroadcastReceiver safety_receiver= null;
 
     @Override
@@ -31,6 +35,9 @@ public class WokerMainActivity extends AppCompatActivity {
         manual_worker = findViewById(R.id.manual_worker);
         report_worker = findViewById(R.id.report_worker);
         logout_worker = findViewById(R.id.logout_worker);
+        bluetooth_connect = findViewById(R.id.bluetooth_connect);
+        vest_connection = findViewById(R.id.vest_connection);
+        safety_state_worker = findViewById(R.id.safety_state_worker);
 
         location_worker.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +68,12 @@ public class WokerMainActivity extends AppCompatActivity {
                 stopService(intent);
             }
         });
+        bluetooth_connect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                vest_connection.setText(getString(R.string.text_vest_connection)+"연결");
+            }
+        });
 
         Intent intent = new Intent(getApplicationContext(), SafetyService.class);
         startService(intent);
@@ -89,7 +102,8 @@ public class WokerMainActivity extends AppCompatActivity {
             public void onReceive(Context context, Intent intent) {
                 int data = intent.getIntExtra("progress", 0);
                 if (intent.getAction().equals("worker_safety")) {
-
+                    if (data > 5)
+                        safety_state_worker.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.button_color));
                 }
             }
         };

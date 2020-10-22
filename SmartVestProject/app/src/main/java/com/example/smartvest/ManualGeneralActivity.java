@@ -1,5 +1,6 @@
 package com.example.smartvest;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
@@ -12,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ManualGeneralActivity extends AppCompatActivity {
     ImageView back_manual_general;
+    ImageView home_manual_general;
     WebView webView;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -19,6 +21,15 @@ public class ManualGeneralActivity extends AppCompatActivity {
         setContentView(R.layout.activity_manual_general);
         back_manual_general = findViewById(R.id.back_manual_general);
         webView = findViewById(R.id.web);
+        home_manual_general = findViewById(R.id.home_manual_general);
+        home_manual_general.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WokerMainActivity.class);
+                intent.setFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
 
         back_manual_general.setOnClickListener(new View.OnClickListener() {
             @Override
